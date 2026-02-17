@@ -14,6 +14,7 @@ const PracticeAreas = lazy(() => import("./pages/PracticeAreas"));
 const Articles = lazy(() => import("./pages/Articles"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ArticlePage = lazy(() => import("./pages/ArticlePage"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 
 /** Scroll to top on route change */
 function ScrollToTop() {
@@ -37,6 +38,7 @@ function Router() {
             <Route path="/articles" component={Articles} />
             <Route path="/articles/:slug" component={ArticlePage} />
             <Route path="/contact" component={Contact} />
+            <Route path="/privacy-policy" component={PrivacyPolicy} />
             <Route path="/404" component={NotFound} />
             <Route component={NotFound} />
           </Switch>

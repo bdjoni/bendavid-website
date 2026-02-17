@@ -151,9 +151,17 @@ export default function Footer() {
           <p className="font-heebo text-[11px] font-light text-white/15">
             © {new Date().getFullYear()} עו״ד יונתן בן דוד. כל הזכויות שמורות.
           </p>
-          <p className="font-dm text-[11px] font-light text-white/10 tracking-[2px]">
-            bdyonatan.co.il
-          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacy-policy"
+              className="font-heebo text-[11px] font-light text-white/15 hover:text-[#c9993a] transition-colors duration-300"
+            >
+              מדיניות פרטיות
+            </Link>
+            <p className="font-dm text-[11px] font-light text-white/10 tracking-[2px]">
+              bdyonatan.co.il
+            </p>
+          </div>
         </div>
       </div>
     </footer>
