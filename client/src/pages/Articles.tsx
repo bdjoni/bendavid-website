@@ -40,7 +40,7 @@ export default function Articles() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           >
-            <span className="font-dm text-[10px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
+            <span className="font-dm text-[11px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
               בלוג
             </span>
             <h1 className="font-frank text-[32px] sm:text-[38px] lg:text-[44px] font-normal text-white leading-[1.3]">
@@ -147,7 +147,7 @@ function ArticleCard({ article }: { article: Article }) {
               {formattedDate}
             </span>
             <span
-              className="font-heebo text-[10px] px-2 py-0.5 rounded-full"
+              className="font-heebo text-[11px] px-2 py-0.5 rounded-full"
               style={{ background: `${categoryColor}15`, color: categoryColor }}
             >
               {article.category}

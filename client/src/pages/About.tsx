@@ -29,7 +29,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           >
-            <span className="font-dm text-[10px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
+            <span className="font-dm text-[11px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
               אודות
             </span>
             <h1 className="font-frank text-[32px] sm:text-[38px] lg:text-[44px] font-normal text-white leading-[1.3]">
@@ -67,7 +67,7 @@ export default function About() {
 
             {/* Bio text */}
             <AnimateOnScroll delay={0.1} className="lg:col-span-3">
-              <span className="font-dm text-[10px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
+              <span className="font-dm text-[11px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
                 הסיפור המקצועי
               </span>
               <h2 className="font-frank text-[26px] sm:text-[30px] font-normal text-[#0a1a30] leading-[1.3] mb-6">
@@ -150,7 +150,7 @@ export default function About() {
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 70% 30%, rgba(184,134,11,0.04) 0%, transparent 60%)' }} />
         <div className="max-w-[800px] mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
           <AnimateOnScroll>
-            <span className="font-dm text-[10px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
+            <span className="font-dm text-[11px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
               ברמה האישית
             </span>
             <h2 className="font-frank text-[26px] sm:text-[30px] font-normal text-white leading-[1.3] mb-6">
@@ -169,7 +169,7 @@ export default function About() {
       <section className="bg-[#FAF8F5] py-20 sm:py-28 lg:py-32">
         <div className="max-w-[800px] mx-auto px-5 sm:px-8 lg:px-10">
           <AnimateOnScroll>
-            <span className="font-dm text-[10px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
+            <span className="font-dm text-[11px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
               הפילוסופיה שלי
             </span>
             <h2 className="font-frank text-[26px] sm:text-[30px] font-normal text-[#0a1a30] leading-[1.3] mb-6">

@@ -85,7 +85,7 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             >
-              <span className="font-dm text-[10px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
+              <span className="font-dm text-[11px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
                 צור קשר
               </span>
               <h1 className="font-frank text-[28px] sm:text-[34px] lg:text-[40px] font-normal text-white leading-[1.3]">
@@ -201,7 +201,7 @@ export default function Contact() {
                       type="text"
                       value={form.name}
                       onChange={e => handleChange('name', e.target.value)}
-                      className={`w-full px-4 py-3.5 bg-white/[0.04] border rounded-[6px] font-heebo text-[14px] font-light text-white outline-none transition-colors duration-200 focus:border-[#B8860B] focus:bg-white/[0.06] placeholder:text-white/15 ${errors.name ? 'border-red-400' : 'border-white/10'}`}
+                      className={`w-full px-4 py-3.5 bg-white/[0.04] border rounded-[6px] font-heebo text-[16px] font-light text-white outline-none transition-colors duration-200 focus:border-[#B8860B] focus:bg-white/[0.06] placeholder:text-white/15 ${errors.name ? 'border-red-400' : 'border-white/10'}`}
                       placeholder="הכנס שם מלא"
                     />
                     {errors.name && <span className="font-heebo text-[12px] text-red-400 mt-1 block">{errors.name}</span>}
@@ -216,7 +216,7 @@ export default function Contact() {
                       type="tel"
                       value={form.phone}
                       onChange={e => handleChange('phone', e.target.value)}
-                      className={`w-full px-4 py-3.5 bg-white/[0.04] border rounded-[6px] font-heebo text-[14px] font-light text-white outline-none transition-colors duration-200 focus:border-[#B8860B] focus:bg-white/[0.06] placeholder:text-white/15 ${errors.phone ? 'border-red-400' : 'border-white/10'}`}
+                      className={`w-full px-4 py-3.5 bg-white/[0.04] border rounded-[6px] font-heebo text-[16px] font-light text-white outline-none transition-colors duration-200 focus:border-[#B8860B] focus:bg-white/[0.06] placeholder:text-white/15 ${errors.phone ? 'border-red-400' : 'border-white/10'}`}
                       placeholder="050-0000000"
                       dir="ltr"
                       style={{ direction: 'ltr', textAlign: 'right' }}

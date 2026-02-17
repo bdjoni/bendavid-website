@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Navigation Column */}
           <div className="flex flex-col items-center md:items-start">
-            <h4 className="font-josefin text-[9px] tracking-[5px] uppercase text-white/30 font-light mb-5">
+            <h4 className="font-josefin text-[11px] tracking-[5px] uppercase text-white/30 font-light mb-5">
               ניווט
             </h4>
             <nav className="flex flex-col gap-3">
@@ -101,7 +101,7 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div className="flex flex-col items-center md:items-start">
-            <h4 className="font-josefin text-[9px] tracking-[5px] uppercase text-white/30 font-light mb-5">
+            <h4 className="font-josefin text-[11px] tracking-[5px] uppercase text-white/30 font-light mb-5">
               יצירת קשר
             </h4>
             <div className="flex flex-col gap-3">
@@ -151,7 +151,7 @@ export default function Footer() {
           <p className="font-heebo text-[11px] font-light text-white/15">
             © {new Date().getFullYear()} עו״ד יונתן בן דוד. כל הזכויות שמורות.
           </p>
-          <p className="font-dm text-[10px] font-light text-white/10 tracking-[2px]">
+          <p className="font-dm text-[11px] font-light text-white/10 tracking-[2px]">
             bdyonatan.co.il
           </p>
         </div>

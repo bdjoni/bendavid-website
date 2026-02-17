@@ -56,8 +56,8 @@
   --font-cormorant: 'Cormorant Garamond', serif;
   --font-frank: 'Frank Ruhl Libre', serif;
   --font-heebo: 'Heebo', sans-serif;
-  --font-dm: 'DM Sans', sans-serif;
-  --font-josefin: 'Josefin Sans', sans-serif;
+  --font-dm: 'Heebo', sans-serif;
+  --font-josefin: 'Heebo', sans-serif;
 }
 
 :root {
@@ -158,8 +158,8 @@
   .font-cormorant { font-family: 'Cormorant Garamond', serif; }
   .font-frank { font-family: 'Frank Ruhl Libre', serif; }
   .font-heebo { font-family: 'Heebo', sans-serif; }
-  .font-dm { font-family: 'DM Sans', sans-serif; }
-  .font-josefin { font-family: 'Josefin Sans', sans-serif; }
+  .font-dm { font-family: 'Heebo', sans-serif; }
+  .font-josefin { font-family: 'Heebo', sans-serif; }
 
   /* Gold accent line */
   .gold-line {
@@ -187,6 +187,16 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Custom scrollbar */

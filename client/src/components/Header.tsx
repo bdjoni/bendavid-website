@@ -79,9 +79,10 @@ export default function Header() {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="md:hidden flex flex-col items-center justify-center gap-1.5 min-h-[48px] min-w-[48px] p-3"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="תפריט"
+            aria-expanded={mobileOpen}
           >
             <span
               className={`block w-5 h-[1.5px] bg-white/60 transition-all duration-300 ${
@@ -109,7 +110,7 @@ export default function Header() {
         }`}
       >
         <nav
-          className="bg-[#0a1a30]/98 backdrop-blur-md border-t border-white/5 px-6 py-6 flex flex-col gap-5"
+          className="bg-[#0a1a30]/98 backdrop-blur-md border-t border-white/5 px-6 py-4 flex flex-col gap-0"
           dir="rtl"
           style={{ direction: 'rtl' }}
         >
@@ -117,7 +118,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`font-heebo text-base font-light transition-colors duration-300 ${
+              className={`font-heebo text-base font-light transition-colors duration-300 py-3 block min-h-[48px] flex items-center ${
                 link.isGold
                   ? 'text-[#c9993a] font-normal'
                   : location === link.href

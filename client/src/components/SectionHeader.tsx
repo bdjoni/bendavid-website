@@ -42,7 +42,7 @@ export default function SectionHeader({
     <AnimateOnScroll className={`flex flex-col ${alignClass} ${className}`}>
       {tag && (
         <span
-          className={`font-dm text-[10px] tracking-[5px] uppercase font-medium mb-3 ${tagColor}`}
+          className={`font-dm text-[11px] tracking-[5px] uppercase font-medium mb-3 ${tagColor}`}
         >
           {tag}
         </span>

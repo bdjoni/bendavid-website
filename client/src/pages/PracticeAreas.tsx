@@ -29,7 +29,7 @@ export default function PracticeAreas() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           >
-            <span className="font-dm text-[10px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
+            <span className="font-dm text-[11px] tracking-[5px] uppercase text-[#B8860B] font-medium block mb-4">
               שירותים
             </span>
             <h1 className="font-frank text-[32px] sm:text-[38px] lg:text-[44px] font-normal text-white leading-[1.3]">
@@ -55,7 +55,7 @@ export default function PracticeAreas() {
 
               <div className="p-8 sm:p-10 lg:p-12">
                 {/* Tag */}
-                <span className="inline-block font-dm text-[10px] tracking-[4px] uppercase text-[#B8860B] font-medium bg-[#B8860B]/10 px-3 py-1 rounded-full mb-5">
+                <span className="inline-block font-dm text-[11px] tracking-[4px] uppercase text-[#B8860B] font-medium bg-[#B8860B]/10 px-3 py-1 rounded-full mb-5">
                   {SERVICES.flagship.tag}
                 </span>
 

@@ -287,7 +287,7 @@ function RelatedCard({ article }: { article: Article }) {
     <Link href={`/articles/${article.slug}`}>
       <div className="group bg-white border border-[#0a1a30]/8 rounded-[10px] p-5 hover:border-[#B8860B]/30 hover:shadow-md transition-all duration-300 h-full flex flex-col cursor-pointer">
         <span
-          className="inline-block self-start font-heebo text-[10px] tracking-[0.12em] uppercase px-2.5 py-0.5 rounded-full mb-3"
+          className="inline-block self-start font-heebo text-[11px] tracking-[0.12em] uppercase px-2.5 py-0.5 rounded-full mb-3"
           style={{ background: `${categoryColor}15`, color: categoryColor }}
         >
           {article.category}

@@ -31,7 +31,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with overlay */}
         <div className="absolute inset-0">
-          <img src={IMAGES.heroBg} alt="" className="w-full h-full object-cover" style={{ objectPosition: 'center top' }} loading="eager" />
+          <img src={IMAGES.heroBg} alt="" className="w-full h-full object-cover" style={{ objectPosition: 'center top' }} loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-[#0a1a30]/70" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a1a30]/40 via-transparent to-[#0a1a30]/60" />
           <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(184,134,11,0.06) 0%, transparent 70%)' }} />
@@ -367,7 +367,7 @@ export default function Home() {
                         {review.author}
                       </span>
                     </div>
-                    <span className="font-heebo text-[10px] font-light text-white/20">
+                    <span className="font-heebo text-[11px] font-light text-white/20">
                       {review.date}
                     </span>
                   </div>
@@ -510,7 +510,7 @@ export default function Home() {
                           <span className="font-heebo text-[11px] text-[#aeaeb2] font-light">
                             {formattedDate}
                           </span>
-                          <span className="font-heebo text-[10px] px-2 py-0.5 rounded-full" style={{ background: `${categoryColor}15`, color: categoryColor }}>
+                          <span className="font-heebo text-[11px] px-2 py-0.5 rounded-full" style={{ background: `${categoryColor}15`, color: categoryColor }}>
                             {article.category}
                           </span>
                         </div>

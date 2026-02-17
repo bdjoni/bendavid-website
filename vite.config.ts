@@ -15,6 +15,18 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Split React core into separate cached chunk
+          'vendor-react': ['react', 'react-dom'],
+          // Split Framer Motion (large animation library)
+          'vendor-motion': ['framer-motion'],
+          // Split markdown rendering (only needed on article pages)
+          'vendor-markdown': ['react-markdown', 'remark-gfm', 'rehype-raw'],
+        },
+      },
+    },
   },
   server: {
     port: 3000,
