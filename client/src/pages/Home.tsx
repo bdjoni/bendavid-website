@@ -146,8 +146,22 @@ export default function Home() {
         <div className="max-w-[900px] mx-auto px-5 sm:px-8 lg:px-10">
           <SectionHeader
             tag="למה מגיעים אליי"
-            title={PROBLEM_SECTION.title}
+            title={
+              <>
+                <span className="text-[#0a1a30]/50">הבעיה היא </span>
+                <span className="text-[#B8860B] font-medium">לא שאין עסקאות</span>
+                <span className="text-[#0a1a30]/50">.</span>
+                <br />
+                <span className="text-[#0a1a30]/50">הבעיה היא שיש </span>
+                <span className="text-[#B8860B] font-medium">יותר מדי</span>
+                <br />
+                <span className="text-[#0a1a30]/50">ואף אחד לא אומר לך</span>
+                <br />
+                <span className="text-[#B8860B] font-bold text-[38px] sm:text-[42px] lg:text-[48px]">את האמת.</span>
+              </>
+            }
             theme="light"
+            className="[&_h2]:leading-[1.6]"
           />
 
           <AnimateOnScroll className="mt-12">

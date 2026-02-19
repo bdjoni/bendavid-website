@@ -18,7 +18,7 @@ export function GoldDivider({ className = '', width = 'w-10' }: GoldDividerProps
 interface SectionHeaderProps {
   tag?: string;
   tagColor?: string;
-  title: string;
+  title: React.ReactNode;
   description?: string;
   align?: 'center' | 'right';
   theme?: 'light' | 'dark';
