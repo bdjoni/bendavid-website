@@ -49,14 +49,17 @@ try {
     articleRoutes = getAllArticles().map(a => `/articles/${a.slug}`);
   }
 } catch {
-  // getAllArticles may not be exported — fall back to known slugs from sitemap
+  // getAllArticles may not be exported — fall back to known slugs
   articleRoutes = [
-    '/articles/mistakes-first-contract',
-    '/articles/georgia-legal-guide',
-    '/articles/capital-gains-tax-2026',
-    '/articles/due-diligence-checklist',
-    '/articles/tama-38-vs-pinui-binui',
+    '/articles/common-mistakes-first-apartment',
     '/articles/how-to-choose-real-estate-lawyer',
+    '/articles/real-estate-investment-georgia',
+    '/articles/capital-gains-tax-changes',
+    '/articles/contractor-agreement-checklist',
+    '/articles/urban-renewal-tama-38',
+    '/articles/investment-apartment-yield-calc',
+    '/articles/legal-guidance-partnerships',
+    '/articles/cautious-buyer-guide-10-steps',
   ];
 }
 
