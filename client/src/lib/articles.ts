@@ -70,6 +70,14 @@ function autoExcerpt(body: string): string {
   return '';
 }
 
+/**
+ * Extract title from first H1 heading in markdown body (fallback when no frontmatter title).
+ */
+function extractH1(body: string): string {
+  const match = body.match(/^#\s+(.+)$/m);
+  return match ? match[1].replace(/\*\*/g, '').trim() : '';
+}
+
 // Parse all articles once at import time
 const allArticles: Article[] = Object.entries(articleModules)
   .map(([, raw]) => {
@@ -77,7 +85,7 @@ const allArticles: Article[] = Object.entries(articleModules)
     return {
       id: meta.id || '',
       slug: meta.slug || '',
-      title: meta.title || '',
+      title: meta.title || extractH1(body),
       excerpt: meta.excerpt || autoExcerpt(body),
       category: meta.category || '',
       date: meta.date || '',

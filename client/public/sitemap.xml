@@ -34,38 +34,56 @@
 
   <!-- Individual Articles -->
   <url>
-    <loc>https://www.bdyonatan.co.il/articles/mistakes-first-contract</loc>
+    <loc>https://www.bdyonatan.co.il/articles/common-mistakes-first-apartment</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bdyonatan.co.il/articles/georgia-legal-guide</loc>
+    <loc>https://www.bdyonatan.co.il/articles/how-to-choose-real-estate-lawyer</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.bdyonatan.co.il/articles/real-estate-investment-georgia</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bdyonatan.co.il/articles/capital-gains-tax-2026</loc>
+    <loc>https://www.bdyonatan.co.il/articles/capital-gains-tax-changes</loc>
     <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bdyonatan.co.il/articles/due-diligence-checklist</loc>
+    <loc>https://www.bdyonatan.co.il/articles/contractor-agreement-checklist</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.bdyonatan.co.il/articles/urban-renewal-tama-38</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bdyonatan.co.il/articles/tama-38-vs-pinui-binui</loc>
+    <loc>https://www.bdyonatan.co.il/articles/investment-apartment-yield-calc</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.bdyonatan.co.il/articles/legal-guidance-partnerships</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bdyonatan.co.il/articles/how-to-choose-real-estate-lawyer</loc>
-    <lastmod>2025-12-28</lastmod>
+    <loc>https://www.bdyonatan.co.il/articles/cautious-buyer-guide-10-steps</loc>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
