@@ -8,10 +8,20 @@ import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { GoldDivider } from '@/components/SectionHeader';
+import SEO from '@/components/SEO';
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen" dir="rtl" style={{ direction: 'rtl' }}>
+      <SEO
+        title="מדיניות פרטיות"
+        description="מדיניות הפרטיות של אתר עו״ד יונתן בן דוד. מידע על איסוף, שימוש ושמירת נתונים אישיים בהתאם לחוק הגנת הפרטיות."
+        path="/privacy-policy"
+        breadcrumbs={[
+          { name: 'דף הבית', path: '/' },
+          { name: 'מדיניות פרטיות', path: '/privacy-policy' },
+        ]}
+      />
       <Header />
 
       {/* ═══════════════════════════════════════════

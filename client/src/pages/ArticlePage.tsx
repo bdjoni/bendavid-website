@@ -20,6 +20,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getArticleBySlug, getRelatedArticles, type Article } from '@/lib/articles';
 import { CONTACT, IMAGES } from '@/lib/data';
+import SEO from '@/components/SEO';
 
 export default function ArticlePage() {
   const { slug } = useParams<{ slug: string }>();
@@ -31,24 +32,6 @@ export default function ArticlePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
-
-  // Update document title for SEO
-  useEffect(() => {
-    if (article) {
-      document.title = `${article.title} | עו״ד יונתן בן דוד`;
-      // Update meta description
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', article.excerpt);
-      // Update OG tags
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', article.title);
-      const ogDesc = document.querySelector('meta[property="og:description"]');
-      if (ogDesc) ogDesc.setAttribute('content', article.excerpt);
-    }
-    return () => {
-      document.title = 'Ben David — Attorney at Law';
-    };
-  }, [article]);
 
   if (!article) {
     return (
@@ -73,6 +56,27 @@ export default function ArticlePage() {
 
   return (
     <div dir="rtl" className="min-h-screen bg-[#FAF8F5] flex flex-col">
+      <SEO
+        title={article.title}
+        description={article.excerpt}
+        path={`/articles/${article.slug}`}
+        image={article.image || undefined}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: article.title,
+          description: article.excerpt,
+          datePublished: article.date,
+          author: { '@type': 'Person', name: 'עו״ד יונתן בן דוד' },
+          publisher: { '@type': 'Organization', name: 'עו״ד יונתן בן דוד' },
+          mainEntityOfPage: `https://www.bdyonatan.co.il/articles/${article.slug}`,
+        }}
+        breadcrumbs={[
+          { name: 'דף הבית', path: '/' },
+          { name: 'מאמרים', path: '/articles' },
+          { name: article.title, path: `/articles/${article.slug}` },
+        ]}
+      />
       <Header />
 
       {/* Article Header — Navy background */}

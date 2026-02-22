@@ -12,10 +12,20 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 import { StaggerContainer, StaggerItem } from '@/components/AnimateOnScroll';
 import SectionHeader, { GoldDivider } from '@/components/SectionHeader';
 import { SERVICES, CONTACT, CTA, IMAGES } from '@/lib/data';
+import SEO from '@/components/SEO';
 
 export default function PracticeAreas() {
   return (
     <div className="min-h-screen" dir="rtl" style={{ direction: 'rtl' }}>
+      <SEO
+        title="תחומי עיסוק — נדל״ן והשקעות"
+        description="ליווי מלא בעסקאות נדל״ן, ייעוץ השקעות, בדיקות נאותות, ליווי שוכרים ומשכירים. עו״ד יונתן בן דוד — משא ומתן מסחרי ומשפטי תחת קורת גג אחת."
+        path="/practice-areas"
+        breadcrumbs={[
+          { name: 'דף הבית', path: '/' },
+          { name: 'תחומי עיסוק', path: '/practice-areas' },
+        ]}
+      />
       <Header />
 
       {/* ═══════════════════════════════════════════

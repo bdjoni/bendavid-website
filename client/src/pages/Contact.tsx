@@ -12,6 +12,7 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 import { GoldDivider } from '@/components/SectionHeader';
 import { CONTACT, CTA, IMAGES } from '@/lib/data';
 import { toast } from 'sonner';
+import SEO from '@/components/SEO';
 
 interface FormData {
   name: string;
@@ -68,6 +69,16 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen" dir="rtl" style={{ direction: 'rtl' }}>
+      <SEO
+        title="צור קשר — עו״ד יונתן בן דוד"
+        description="צרו קשר עם עו״ד יונתן בן דוד לשיחת ייעוץ ראשונה ללא התחייבות. טלפון: 054-210-2430. משרד במגדל WE, מנחם בגין 150, תל אביב."
+        path="/contact"
+        image={IMAGES.contactPhone}
+        breadcrumbs={[
+          { name: 'דף הבית', path: '/' },
+          { name: 'צור קשר', path: '/contact' },
+        ]}
+      />
       <Header />
 
       {/* ═══════════════════════════════════════════

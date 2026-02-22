@@ -14,6 +14,7 @@ import { StaggerContainer, StaggerItem } from '@/components/AnimateOnScroll';
 import { GoldDivider } from '@/components/SectionHeader';
 import { CTA } from '@/lib/data';
 import { getAllArticles, getCategories, type Article } from '@/lib/articles';
+import SEO from '@/components/SEO';
 
 export default function Articles() {
   const articles = getAllArticles();
@@ -27,6 +28,15 @@ export default function Articles() {
 
   return (
     <div className="min-h-screen" dir="rtl" style={{ direction: 'rtl' }}>
+      <SEO
+        title="מאמרים — תובנות מעולם הנדל״ן והמשפט"
+        description="מאמרים מקצועיים בנושאי נדל״ן, השקעות, מיסוי מקרקעין, תמ״א 38, ובדיקות נאותות. עו״ד יונתן בן דוד — תובנות ישירות מהשטח."
+        path="/articles"
+        breadcrumbs={[
+          { name: 'דף הבית', path: '/' },
+          { name: 'מאמרים', path: '/articles' },
+        ]}
+      />
       <Header />
 
       {/* ═══════════════════════════════════════════

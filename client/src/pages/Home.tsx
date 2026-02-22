@@ -19,10 +19,16 @@ import {
   CTA, CONTACT, SERVICES,
 } from '@/lib/data';
 import { getFeaturedArticles } from '@/lib/articles';
+import SEO from '@/components/SEO';
 
 export default function Home() {
   return (
     <div className="min-h-screen" dir="rtl" style={{ direction: 'rtl' }}>
+      <SEO
+        title="עו״ד יונתן בן דוד | עורך דין נדל״ן והשקעות בתל אביב"
+        description="עו״ד יונתן בן דוד — ליווי משפטי מלא בעסקאות נדל״ן והשקעות. 13+ שנות ניסיון, 1,300+ עסקאות. משרד בתל אביב. שיחת ייעוץ ראשונה ללא התחייבות."
+        path="/"
+      />
       <Header />
 
       {/* ═══════════════════════════════════════════

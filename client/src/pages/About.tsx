@@ -12,10 +12,21 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 import { StaggerContainer, StaggerItem } from '@/components/AnimateOnScroll';
 import SectionHeader, { GoldDivider } from '@/components/SectionHeader';
 import { ABOUT, CONTACT, CTA, IMAGES } from '@/lib/data';
+import SEO from '@/components/SEO';
 
 export default function About() {
   return (
     <div className="min-h-screen" dir="rtl" style={{ direction: 'rtl' }}>
+      <SEO
+        title="אודות עו״ד יונתן בן דוד"
+        description="עו״ד יונתן בן דוד — 13+ שנות ניסיון בנדל״ן, 1,300+ עסקאות. התחלתי בשטח כמלווה משקיעים, הוסמכתי כעו״ד, ופתחתי משרד שמשלב הבנה עסקית עם הגנה משפטית. משרד בתל אביב."
+        path="/about"
+        image={IMAGES.aboutMain}
+        breadcrumbs={[
+          { name: 'דף הבית', path: '/' },
+          { name: 'אודות', path: '/about' },
+        ]}
+      />
       <Header />
 
       {/* ═══════════════════════════════════════════
