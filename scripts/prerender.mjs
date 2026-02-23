@@ -38,6 +38,8 @@ const staticRoutes = [
   '/articles',
   '/contact',
   '/privacy-policy',
+  '/terms-of-use',
+  '/accessibility',
 ];
 
 // Dynamic article routes — extracted from the SSR bundle

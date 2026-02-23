@@ -103,4 +103,20 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <!-- Terms of Use -->
+  <url>
+    <loc>https://www.bdyonatan.co.il/terms-of-use</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Accessibility Statement -->
+  <url>
+    <loc>https://www.bdyonatan.co.il/accessibility</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

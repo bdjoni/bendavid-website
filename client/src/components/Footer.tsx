@@ -158,9 +158,20 @@ export default function Footer() {
             >
               מדיניות פרטיות
             </Link>
-            <p className="font-dm text-[11px] font-light text-white/10 tracking-[2px]">
-              bdyonatan.co.il
-            </p>
+            <span className="text-white/10">|</span>
+            <Link
+              href="/terms-of-use"
+              className="font-heebo text-[11px] font-light text-white/15 hover:text-[#c9993a] transition-colors duration-300"
+            >
+              תנאי שימוש
+            </Link>
+            <span className="text-white/10">|</span>
+            <Link
+              href="/accessibility"
+              className="font-heebo text-[11px] font-light text-white/15 hover:text-[#c9993a] transition-colors duration-300"
+            >
+              הצהרת נגישות
+            </Link>
           </div>
         </div>
       </div>
