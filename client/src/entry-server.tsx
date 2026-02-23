@@ -23,6 +23,8 @@ import Articles from './pages/Articles';
 import ArticlePage from './pages/ArticlePage';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfUse from './pages/TermsOfUse';
+import AccessibilityStatement from './pages/AccessibilityStatement';
 import NotFound from './pages/NotFound';
 
 // Re-export for pre-render script to get article slugs dynamically
@@ -39,6 +41,8 @@ function SSRRouter() {
         <Route path="/articles/:slug" component={ArticlePage} />
         <Route path="/contact" component={Contact} />
         <Route path="/privacy-policy" component={PrivacyPolicy} />
+        <Route path="/terms-of-use" component={TermsOfUse} />
+        <Route path="/accessibility" component={AccessibilityStatement} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
