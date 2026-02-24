@@ -173,23 +173,61 @@ export default function AccessibilityWidget() {
     saveSettings(settings);
   }, [settings]);
 
-  // Close on Escape
+  // Focus trap + Escape + auto-focus when panel opens
   useEffect(() => {
+    if (!open) return;
+
+    // Auto-focus the first focusable element after animation
+    const timer = setTimeout(() => {
+      if (!panelRef.current) return;
+      const first = panelRef.current.querySelector<HTMLElement>(
+        'button, a[href], [tabindex]:not([tabindex="-1"])'
+      );
+      first?.focus();
+    }, 100);
+
     function handleKey(e: KeyboardEvent) {
-      if (e.key === 'Escape' && open) {
+      if (e.key === 'Escape') {
         setOpen(false);
         buttonRef.current?.focus();
+        return;
+      }
+
+      // Focus trap: keep Tab cycling inside the panel
+      if (e.key === 'Tab' && panelRef.current) {
+        const focusable = panelRef.current.querySelectorAll<HTMLElement>(
+          'button, a[href], [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
       }
     }
+
     document.addEventListener('keydown', handleKey);
-    return () => document.removeEventListener('keydown', handleKey);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('keydown', handleKey);
+    };
   }, [open]);
 
   // Close when clicking outside
   useEffect(() => {
+    if (!open) return;
     function handleClick(e: MouseEvent) {
       if (
-        open &&
         panelRef.current &&
         !panelRef.current.contains(e.target as Node) &&
         buttonRef.current &&
@@ -257,11 +295,11 @@ export default function AccessibilityWidget() {
             role="dialog"
             aria-label="הגדרות נגישות"
             dir="rtl"
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-            className="fixed bottom-24 left-6 z-[9998] w-[320px] max-h-[75vh] bg-[#0a1a30]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-[0_12px_48px_rgba(0,0,0,0.4)] overflow-hidden"
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 60 }}
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+            className="fixed z-[9998] bg-[#0a1a30]/95 backdrop-blur-xl border border-white/10 shadow-[0_12px_48px_rgba(0,0,0,0.4)] overflow-hidden inset-x-0 bottom-0 rounded-t-2xl max-h-[85vh] sm:inset-x-auto sm:bottom-24 sm:left-6 sm:w-[320px] sm:max-h-[75vh] sm:rounded-2xl"
           >
             {/* Header */}
             <div className="px-5 pt-5 pb-3 border-b border-white/10">
@@ -283,7 +321,7 @@ export default function AccessibilityWidget() {
             </div>
 
             {/* Scrollable content */}
-            <div className="px-4 py-3 overflow-y-auto max-h-[calc(75vh-140px)] space-y-2 a11y-panel-scroll">
+            <div className="px-4 py-3 overflow-y-auto max-h-[calc(85vh-140px)] sm:max-h-[calc(75vh-140px)] space-y-2 a11y-panel-scroll">
               {/* Text Size — special (cycle button) */}
               <button
                 onClick={cycleTextSize}
