@@ -10,6 +10,7 @@
  */
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
 // ─── Types ───────────────────────────────────────────────
@@ -264,7 +265,14 @@ export default function AccessibilityWidget() {
 
   const textSizeLabels = ['רגיל', 'גדול', 'גדול מאוד'];
 
-  return (
+  // Render into a portal so the widget stays outside #root.
+  // This prevents CSS zoom / filter on #root from affecting the widget.
+  const portalTarget =
+    typeof document !== 'undefined'
+      ? document.getElementById('a11y-portal')
+      : null;
+
+  const content = (
     <>
       {/* ── Floating Button ── */}
       <button
@@ -427,4 +435,6 @@ export default function AccessibilityWidget() {
       </AnimatePresence>
     </>
   );
+
+  return portalTarget ? createPortal(content, portalTarget) : content;
 }

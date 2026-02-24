@@ -220,11 +220,15 @@ html {
    ═══════════════════════════════════════════════════════════ */
 
 /* ── Text Size ── */
-html.a11y-text-large {
-  font-size: 120% !important;
+/* Using zoom on #root (not html) because the site uses px-based font sizes
+   from Tailwind (text-[14px] etc.), which don't respond to root font-size changes.
+   zoom scales everything proportionally including px values.
+   The accessibility widget lives in a portal outside #root, so it stays unaffected. */
+html.a11y-text-large #root {
+  zoom: 1.15;
 }
-html.a11y-text-xl {
-  font-size: 140% !important;
+html.a11y-text-xl #root {
+  zoom: 1.3;
 }
 
 /* ── High Contrast ── */
@@ -275,7 +279,10 @@ html.a11y-high-contrast img {
 }
 
 /* ── Grayscale ── */
-html.a11y-grayscale body {
+/* Applied to #root (not body) because CSS filter creates a new stacking context,
+   which breaks position:fixed on child elements. The accessibility widget lives
+   in a portal outside #root, so it remains visible and correctly positioned. */
+html.a11y-grayscale #root {
   filter: grayscale(1) !important;
 }
 
