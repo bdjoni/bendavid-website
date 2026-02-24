@@ -69,62 +69,91 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5J9SFSHJ');</script>
 
-    <!-- JSON-LD Structured Data -->
-    <!-- JSON-LD Structured Data: Attorney -->
+    <!-- JSON-LD Structured Data: Connected Entity Graph -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Attorney",
-      "name": "עו״ד יונתן בן דוד",
-      "alternateName": "Yonatan Ben David",
-      "description": "עורך דין המתמחה בנדל״ן והשקעות עם 13+ שנות ניסיון ו-1,300+ עסקאות. ליווי משפטי מלא מהפגישה הראשונה ועד מסירת המפתח.",
-      "url": "https://www.bdyonatan.co.il",
-      "telephone": "+972-54-210-2430",
-      "email": "yonatan@bdyonatan.co.il",
-      "image": "https://files.manuscdn.com/user_upload_by_module/session_file/99481019/nGxCAGTHYKqHJCMe.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "מנחם בגין 150, מגדל WE",
-        "addressLocality": "תל אביב",
-        "postalCode": "6492104",
-        "addressCountry": "IL"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "32.0731",
-        "longitude": "34.7925"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Israel"
-      },
-      "knowsAbout": ["נדל״ן", "השקעות נדל״ן", "בדיקות נאותות", "התחדשות עירונית", "תמ״א 38", "פינוי בינוי", "מס שבח", "ליווי עסקאות"],
-      "priceRange": "$$",
-      "openingHours": "Su-Th 09:00-18:00",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "25",
-        "bestRating": "5"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/bdyonatan/",
-        "https://www.instagram.com/bdyonatan/",
-        "https://www.facebook.com/bdYonatan/",
-        "https://www.tiktok.com/@bdyonatan",
-        "https://www.youtube.com/@bdyonatan"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.bdyonatan.co.il/#person",
+          "name": "יונתן בן דוד",
+          "alternateName": ["Yonatan Ben David", "עו״ד יונתן בן דוד", "Adv. Yonatan Ben David"],
+          "givenName": "יונתן",
+          "familyName": "בן דוד",
+          "jobTitle": "עורך דין",
+          "description": "עורך דין המתמחה בנדל״ן והשקעות עם 13+ שנות ניסיון ו-1,300+ עסקאות מוצלחות. מלווה משקיעים ורוכשי דירות מהפגישה הראשונה ועד מסירת המפתח.",
+          "url": "https://www.bdyonatan.co.il/about",
+          "image": "https://files.manuscdn.com/user_upload_by_module/session_file/99481019/nGxCAGTHYKqHJCMe.jpg",
+          "telephone": "+972-54-210-2430",
+          "email": "yonatan@bdyonatan.co.il",
+          "knowsLanguage": ["he", "en"],
+          "knowsAbout": ["נדל״ן", "השקעות נדל״ן", "בדיקות נאותות", "התחדשות עירונית", "תמ״א 38", "פינוי בינוי", "מס שבח", "ליווי עסקאות", "חוזי מקרקעין", "Real Estate Law"],
+          "worksFor": { "@id": "https://www.bdyonatan.co.il/#attorney" },
+          "sameAs": [
+            "https://www.linkedin.com/in/bdyonatan/",
+            "https://www.instagram.com/bdyonatan/",
+            "https://www.facebook.com/bdYonatan/",
+            "https://www.tiktok.com/@bdyonatan",
+            "https://www.youtube.com/@bdyonatan",
+            "https://www.mishpati.co.il/lawyers/bdyonatan",
+            "https://www.immoisrael.com/he/agencies/nadlan-lad/agents/%D7%99%D7%95%D7%A0%D7%AA%D7%9F-%D7%91%D7%9F-%D7%93%D7%95%D7%93",
+            "https://www.nadlan-asakim.co.il/agent/yonib/"
+          ]
+        },
+        {
+          "@type": "Attorney",
+          "@id": "https://www.bdyonatan.co.il/#attorney",
+          "name": "עו״ד יונתן בן דוד",
+          "alternateName": "Yonatan Ben David Law Office",
+          "description": "משרד עורכי דין המתמחה בנדל״ן והשקעות עם 13+ שנות ניסיון ו-1,300+ עסקאות. ליווי משפטי מלא מהפגישה הראשונה ועד מסירת המפתח.",
+          "url": "https://www.bdyonatan.co.il",
+          "telephone": "+972-54-210-2430",
+          "email": "yonatan@bdyonatan.co.il",
+          "image": "https://files.manuscdn.com/user_upload_by_module/session_file/99481019/nGxCAGTHYKqHJCMe.jpg",
+          "founder": { "@id": "https://www.bdyonatan.co.il/#person" },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "מנחם בגין 150, מגדל WE",
+            "addressLocality": "תל אביב",
+            "postalCode": "6492104",
+            "addressCountry": "IL"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "32.0731",
+            "longitude": "34.7925"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Israel"
+          },
+          "knowsAbout": ["נדל״ן", "השקעות נדל״ן", "בדיקות נאותות", "התחדשות עירונית", "תמ״א 38", "פינוי בינוי", "מס שבח", "ליווי עסקאות"],
+          "priceRange": "$$",
+          "openingHours": "Su-Th 09:00-18:00",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "25",
+            "bestRating": "5"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/bdyonatan/",
+            "https://www.instagram.com/bdyonatan/",
+            "https://www.facebook.com/bdYonatan/",
+            "https://www.tiktok.com/@bdyonatan",
+            "https://www.youtube.com/@bdyonatan"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.bdyonatan.co.il/#website",
+          "name": "עו״ד יונתן בן דוד — עורך דין נדל״ן",
+          "url": "https://www.bdyonatan.co.il",
+          "inLanguage": "he",
+          "publisher": { "@id": "https://www.bdyonatan.co.il/#person" }
+        }
       ]
-    }
-    </script>
-
-    <!-- JSON-LD: WebSite (for Google Sitelinks search) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "עו״ד יונתן בן דוד — עורך דין נדל״ן",
-      "url": "https://www.bdyonatan.co.il",
-      "inLanguage": "he"
     }
     </script>
   </head>
