@@ -232,10 +232,17 @@ html.a11y-high-contrast body {
   background: #000 !important;
   color: #fff !important;
 }
-html.a11y-high-contrast main,
-html.a11y-high-contrast section,
-html.a11y-high-contrast div:not([id="a11y-panel"]):not([role="dialog"]) {
-  background-color: inherit;
+/* Remove background images and force dark background on all sections */
+html.a11y-high-contrast #main-content *:not([id="a11y-panel"]):not([id="a11y-panel"] *) {
+  background-image: none !important;
+  background-color: #000 !important;
+  border-color: #fff !important;
+}
+html.a11y-high-contrast header,
+html.a11y-high-contrast footer,
+html.a11y-high-contrast nav {
+  background-image: none !important;
+  background-color: #000 !important;
 }
 html.a11y-high-contrast h1,
 html.a11y-high-contrast h2,
@@ -249,12 +256,19 @@ html.a11y-high-contrast a {
   color: #0ff !important;
 }
 html.a11y-high-contrast p,
-html.a11y-high-contrast span,
+html.a11y-high-contrast span:not([id="a11y-panel"] span),
 html.a11y-high-contrast li,
 html.a11y-high-contrast td,
 html.a11y-high-contrast th,
-html.a11y-high-contrast label {
+html.a11y-high-contrast label,
+html.a11y-high-contrast div {
   color: #fff !important;
+}
+/* Keep buttons visible */
+html.a11y-high-contrast button:not([id="a11y-panel"] button):not([aria-label*="נגישות"]) {
+  background-color: #333 !important;
+  color: #ff0 !important;
+  border: 2px solid #ff0 !important;
 }
 html.a11y-high-contrast img {
   filter: contrast(1.3) brightness(1.1);
